@@ -1,0 +1,81 @@
+{
+  "benched_at": "2026-10-10T11:23:41Z",
+  "build_number": "0.1.10",
+  "bench_sha": "ef813c7ab151b14f",
+  "aggregate": {
+    "hiver/bulk-website-screenshots": {
+      "cases_run": 3,
+      "success_rate": 1.0,
+      "coverage": 8,
+      "completeness": 1.0,
+      "accuracy": 0.9444,
+      "duplicates": 0.0,
+      "runtime_s": 49.2,
+      "cost_usd": 0.0086,
+      "price_per_1000_usd": 0.6837,
+      "list_price_per_1000_usd": 0.8
+    },
+    "apify/screenshot-url": {
+      "cases_run": 3,
+      "success_rate": 0.3333,
+      "coverage": 4,
+      "completeness": 0.2857,
+      "accuracy": 0.2222,
+      "duplicates": 0.0,
+      "runtime_s": 103.4,
+      "cost_usd": 0.0206,
+      "price_per_1000_usd": null,
+      "list_price_per_1000_usd": null
+    },
+    "fourwake/screenshot-api": {
+      "cases_run": 3,
+      "success_rate": 0.6667,
+      "coverage": 7,
+      "completeness": 0.4286,
+      "accuracy": 0.3333,
+      "duplicates": 0.0,
+      "runtime_s": 109.3,
+      "cost_usd": 0.021,
+      "price_per_1000_usd": 3.0,
+      "list_price_per_1000_usd": 3.0
+    },
+    "fetch_cat/website-screenshot-generator": {
+      "cases_run": 3,
+      "success_rate": 0.6667,
+      "coverage": 6,
+      "completeness": 0.6667,
+      "accuracy": 0.6667,
+      "duplicates": 0.0,
+      "runtime_s": 16.7,
+      "cost_usd": 0.1138,
+      "price_per_1000_usd": 9.1667,
+      "list_price_per_1000_usd": 8.0
+    }
+  },
+  "caveats": [
+    "full-page apify rival START_FAILED: unsupported jpeg bench input",
+    "94.44% aggregate accuracy, below 95%",
+    "full-page completeness tied fetch_cat; no full-page completeness edge",
+    "No speed advantage claimed"
+  ],
+  "full_page_example": {
+    "url": "https://en.wikipedia.org/wiki/Cat",
+    "finalUrl": "https://en.wikipedia.org/wiki/Cat",
+    "status": "ok",
+    "httpStatus": 200,
+    "title": "Cat - Wikipedia",
+    "format": "jpeg",
+    "bytes": 3852756,
+    "width": 1920,
+    "height": 16000,
+    "pageHeight": 34232,
+    "imagesPending": 0,
+    "truncatedAt": 16000,
+    "captureTiles": 15,
+    "captureSeconds": 8.06,
+    "error": null,
+    "seconds": 15.2,
+    "scrapedAt": "2026-10-10T11:18:37+00:00",
+    "imageKey": "en.wikipedia.org-wiki-Cat-63c1927c.jpg"
+  }
+}

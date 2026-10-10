@@ -1,0 +1,101 @@
+{
+  "source": "board bench 2026-10-10T11:23:41Z, build 0.1.10",
+  "note": "Actual sample/error row fields; image URLs replaced with offline mock URLs. Pixel bytes in tests are synthetic, not measured captures.",
+  "samples": [
+    {
+      "case": "mixed-sites",
+      "row": {
+        "url": "https://example.com",
+        "finalUrl": "https://example.com/",
+        "status": "ok",
+        "httpStatus": 200,
+        "title": "Example Domain",
+        "imageUrl": "https://images.example.test/mixed-sites.png",
+        "format": "png",
+        "bytes": 78288,
+        "width": 1920,
+        "height": 1080,
+        "pageHeight": 1080,
+        "imagesPending": 0,
+        "truncatedAt": null,
+        "captureTiles": 1,
+        "captureSeconds": 0.34,
+        "error": null,
+        "seconds": 3.5,
+        "scrapedAt": "2026-10-10T11:15:28+00:00",
+        "imageKey": "example.com-327c3fda.png"
+      }
+    },
+    {
+      "case": "dead-link-in-list",
+      "row": {
+        "url": "https://news.ycombinator.com",
+        "finalUrl": "https://news.ycombinator.com/",
+        "status": "ok",
+        "httpStatus": 200,
+        "title": "Hacker News",
+        "imageUrl": "https://images.example.test/dead-link-in-list.png",
+        "format": "png",
+        "bytes": 232070,
+        "width": 1920,
+        "height": 1080,
+        "pageHeight": 1215,
+        "imagesPending": 0,
+        "truncatedAt": null,
+        "captureTiles": 1,
+        "captureSeconds": 0.12,
+        "error": null,
+        "seconds": 2.2,
+        "scrapedAt": "2026-10-10T11:17:03+00:00",
+        "imageKey": "news.ycombinator.com-7b1528be.png"
+      }
+    },
+    {
+      "case": "dead-link-in-list",
+      "row": {
+        "url": "https://nonexistent-zzq.invalid",
+        "finalUrl": null,
+        "status": "failed",
+        "httpStatus": null,
+        "title": null,
+        "imageUrl": null,
+        "format": "png",
+        "bytes": null,
+        "width": null,
+        "height": null,
+        "pageHeight": null,
+        "imagesPending": null,
+        "truncatedAt": null,
+        "captureTiles": null,
+        "captureSeconds": null,
+        "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://nonexistent-zzq.invalid/",
+        "seconds": 0.1,
+        "scrapedAt": "2026-10-10T11:17:03+00:00"
+      }
+    },
+    {
+      "case": "full-page-traps",
+      "row": {
+        "url": "https://en.wikipedia.org/wiki/Cat",
+        "finalUrl": "https://en.wikipedia.org/wiki/Cat",
+        "status": "ok",
+        "httpStatus": 200,
+        "title": "Cat - Wikipedia",
+        "imageUrl": "https://images.example.test/full-page-traps.png",
+        "format": "jpeg",
+        "bytes": 3852756,
+        "width": 1920,
+        "height": 16000,
+        "pageHeight": 34232,
+        "imagesPending": 0,
+        "truncatedAt": 16000,
+        "captureTiles": 15,
+        "captureSeconds": 8.06,
+        "error": null,
+        "seconds": 15.2,
+        "scrapedAt": "2026-10-10T11:18:37+00:00",
+        "imageKey": "en.wikipedia.org-wiki-Cat-63c1927c.jpg"
+      }
+    }
+  ]
+}

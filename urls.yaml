@@ -1,0 +1,9 @@
+# Use sites you own or have permission to monitor.
+pixelDiffThreshold: 1.0
+# Maximum Actor charge per device/fullPage/format group (not a total account budget).
+maxTotalChargeUsd: 0.10
+urls:
+  - url: https://example.com
+    fullPage: true
+    device: desktop
+    format: png

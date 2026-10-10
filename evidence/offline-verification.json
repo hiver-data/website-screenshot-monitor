@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-10T13:59:59.955095Z",
+  "command": "python -m unittest discover -s tests -v",
+  "tests": 31,
+  "failures": 0,
+  "errors": 0,
+  "network": "mocked; no Apify calls",
+  "apify_spend_usd": 0,
+  "runtime_python": "3.13 (workflow requests 3.12)",
+  "fixture_provenance": "board bench 2026-10-10T11:23:41Z build 0.1.10",
+  "403_test": "fault injection, not measured 403 row"
+}
