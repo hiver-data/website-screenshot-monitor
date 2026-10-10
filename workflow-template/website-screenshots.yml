@@ -4,7 +4,7 @@ on:
     - cron: '37 6 * * 1'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: website-screenshot-monitor
   cancel-in-progress: false
@@ -20,25 +20,18 @@ jobs:
       - run: python -m pip install -r requirements.txt
       - name: Run offline tests
         run: python -m unittest discover -s tests -v
-      - name: Restore last successful images and state
-        uses: actions/cache/restore@v4
-        with:
-          path: monitor-data
-          key: screenshot-history-${{ github.repository }}-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: |
-            screenshot-history-${{ github.repository }}-
+      - name: Restore durable baseline
+        id: restore
+        run: python baseline_store.py restore
       - name: Capture and compare
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           SCREENSHOT_WEBHOOK_URL: ${{ secrets.SCREENSHOT_WEBHOOK_URL }}
           SCREENSHOT_WEBHOOK_KIND: ${{ vars.SCREENSHOT_WEBHOOK_KIND || 'slack' }}
         run: python monitor.py
-      - name: Save history even if a URL failed
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: monitor-data
-          key: screenshot-history-${{ github.repository }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Save baseline even if a URL or webhook failed
+        if: ${{ always() && steps.restore.outcome == 'success' }}
+        run: python baseline_store.py save
       - name: Job summary
         if: always()
         run: |
