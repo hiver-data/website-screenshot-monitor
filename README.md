@@ -4,6 +4,10 @@ A free Python monitor and weekly GitHub Actions template. List pages in `urls.ya
 
 The code is MIT licensed. **Apify captures are not free:** you use your own Apify account and `APIFY_TOKEN`, and its usage is charged to that account. Running this repository's offline tests makes no Apify requests. No token, production screenshot or paid run is included in the repository.
 
+![Real output from the board test run on 2026-10-11 (Actor build 0.1.15): 4 long pages in, 4 full-page JPEGs and one table with final URL, HTTP status, title, page height and image link](media/screenshots/readme.gif)
+
+[Watch the 2-minute walkthrough of the Actor (MP4, 1080p)](media/screenshots/walkthrough.mp4)
+
 ## Quick start
 
 Use Python 3.12 or newer:
